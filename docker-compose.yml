@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  vscode-node:
+    image: node:14.17.5
+    volumes:
+      - ../:/usr/src/web
+    tty: true

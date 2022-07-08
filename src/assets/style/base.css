@@ -1,0 +1,19 @@
+@import 'tailwindcss/base';
+
+@layer base {
+  @supports (-webkit-touch-callout: none) {
+    /* 禁用 ios 手機瀏覽器的用戶在長按後打開選擇功能 */
+    * {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    input {
+      -webkit-user-select: auto;
+    }
+  }
+}
