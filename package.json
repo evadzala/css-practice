@@ -62,7 +62,7 @@
     "*.{js, vue}": [
       "vue-cli-service lint"
     ],
-    "*.{vue, scss, css}": [
+    "*.{html, vue, scss, css}": [
       "stylelint '**/*.{vue, scss, css}'"
     ]
   }
