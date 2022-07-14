@@ -4,6 +4,7 @@
       This is home page.
     </h1>
     <for-test :msg="testMsg" />
+    <star />
     <!-- <hello-world /> -->
   </div>
 </template>
@@ -12,9 +13,10 @@
 import { ref } from 'vue'
 // import HelloWorld from '../components/HelloWorld.vue'
 import ForTest from '@/components/forTest.vue'
+import Star from '@/components/star.vue'
 export default {
   name: 'Home',
-  components: { ForTest },
+  components: { ForTest, Star },
   setup () {
     const testMsg = ref('test')
 
@@ -24,3 +26,6 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+</style>
