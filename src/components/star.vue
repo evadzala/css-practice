@@ -9,6 +9,10 @@
         class="square"
       ></div> -->
     </div>
+    <div class="outside-circle">
+      <div class="equilateral-triangle equilateral-triangle-positive"></div>
+      <div class="equilateral-triangle equilateral-triangle-negative"></div>
+    </div>
   </div>
 </template>
 
@@ -23,11 +27,10 @@ export default {
   width: 500px;
   height: 500px;
   background-color: aquamarine;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
 }
 .outside-circle {
+  margin: 10px auto 10px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,22 +65,21 @@ export default {
     border: 1px solid red;
   }
 }
-.equilateral-triangle-positive {
+
+.equilateral-triangle {
   position: absolute;
-  top: 80px;
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 200px 200px 200px 200px;
-  border-color: red transparent transparent transparent;
-}
-.equilateral-triangle-negative {
-  position: absolute;
-  bottom: 80px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 120px 160px 120px;
-  border-color: transparent transparent red transparent;
+  border-width: 0 103.923px 180px 103.923px;
+  border-color: transparent transparent #007bff transparent;
+
+  &-positive {
+    top: 0;
+  }
+  &-negative {
+    bottom: 0;
+    transform: rotate(180deg);
+  }
 }
 </style>
