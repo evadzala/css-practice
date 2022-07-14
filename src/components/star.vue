@@ -2,12 +2,12 @@
   <div class="table m-auto">
     <div class="outside-circle">
       <div class="square square-center"></div>
-      <div
+      <!-- <div
         v-for="i in 4"
         :key="`square-${i + 1}`"
         :class="`square-${i}`"
         class="square"
-      ></div>
+      ></div> -->
     </div>
   </div>
 </template>
@@ -28,6 +28,9 @@ export default {
   align-items: center;
 }
 .outside-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 240px;
   height: 240px;
@@ -54,8 +57,6 @@ export default {
   }
 
   &-center {
-    top: 14%;
-    left: 14%;
     width: 169.7px;
     height: 169.7px;
     border: 1px solid red;
