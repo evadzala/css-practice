@@ -1,7 +1,7 @@
 <template>
   <div class="table m-auto">
-    <div class="outside-circle">
-      <div class="square square-center"></div>
+    <div class="outside-circle red">
+      <div class="square square-center red"></div>
       <!-- <div
         v-for="i in 4"
         :key="`square-${i + 1}`"
@@ -39,12 +39,24 @@ export default {
   height: 240px;
   border: 1px solid;
   border-radius: 100%;
+
+  &:hover {
+    animation: rolling 4s linear infinite;
+  }
+}
+
+.outside-circle:hover {
+  animation: rolling 4s linear infinite;
 }
 .square {
   width: 120px;
   height: 120px;
-  border: 1px solid;
+  border: 1px black solid;
   position: absolute;
+
+  // &.red {
+  //   background-color: red;
+  // }
 
   &-1 {
     left: 120px;
@@ -82,4 +94,24 @@ export default {
     transform: rotate(180deg);
   }
 }
+
+@keyframes rolling{
+  0%{
+    transform: rotate(0);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.outside-circle .red{
+  background-color: red;
+}
+
+// .outside-circle.red{
+//   background-color: red;
+// }
 </style>
