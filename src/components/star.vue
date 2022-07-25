@@ -1,6 +1,10 @@
 <template>
-  <div class="table m-auto">
-    <div class="outside-circle red">
+  <!-- <div class="table m-auto"> -->
+  <div class="w-[600px] h-[600px] inline-block bg-[#257]">
+    <!-- <div class="outside-circle red"> -->
+    <div
+      class="flex justify-center items-center my-[10px] mx-auto relative w-60 h-60 border divide-solid rounded-full animate-[rolling_4s_linear_infinite] hover:animate-rolling"
+    >
       <div class="square square-center red"></div>
       <!-- <div
         v-for="i in 4"
@@ -9,7 +13,9 @@
         class="square"
       ></div> -->
     </div>
-    <div class="outside-circle">
+    <div
+      class="outside-circle animate-[rolling_reverse_4s_linear_infinite] hover:animate-[rolling_reverse_1s_linear_infinite]"
+    >
       <div class="equilateral-triangle equilateral-triangle-positive"></div>
       <div class="equilateral-triangle equilateral-triangle-negative"></div>
     </div>
@@ -23,12 +29,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.table {
-  width: 500px;
-  height: 500px;
-  background-color: aquamarine;
-  display: inline-block;
-}
 .outside-circle {
   margin: 10px auto 10px auto;
   display: flex;
@@ -39,24 +39,13 @@ export default {
   height: 240px;
   border: 1px solid;
   border-radius: 100%;
-
-  &:hover {
-    animation: rolling 4s linear infinite;
-  }
 }
 
-.outside-circle:hover {
-  animation: rolling 4s linear infinite;
-}
 .square {
   width: 120px;
   height: 120px;
   border: 1px black solid;
   position: absolute;
-
-  // &.red {
-  //   background-color: red;
-  // }
 
   &-1 {
     left: 120px;
@@ -95,23 +84,19 @@ export default {
   }
 }
 
-@keyframes rolling{
+@keyframes rolling_reverse {
   0%{
     transform: rotate(0);
   }
   50%{
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
   }
   100%{
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
 
 .outside-circle .red{
   background-color: red;
 }
-
-// .outside-circle.red{
-//   background-color: red;
-// }
 </style>

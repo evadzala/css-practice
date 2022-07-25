@@ -70,6 +70,7 @@ module.exports = {
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
+      rolling: 'rolling 1s linear infinite',
     },
     backdropBlur: (theme) => theme('blur'),
     backdropBrightness: (theme) => theme('brightness'),
@@ -489,6 +490,17 @@ module.exports = {
         '50%': {
           transform: 'none',
           animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
+        },
+      },
+      rolling: {
+        '0%': {
+          transform: 'rotate(0)',
+        },
+        '50%': {
+          transform: 'rotate(180deg)',
+        },
+        '100%': {
+          transform: 'rotate(360deg)',
         },
       },
     },
