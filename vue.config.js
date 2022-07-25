@@ -4,7 +4,7 @@ module.exports = defineConfig({
   transpileDependencies: true,
   productionSourceMap: false,
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/vue3-toDoList/'
+    ? '/css-practice/'
     : '/',
   devServer: {
     proxy: {
